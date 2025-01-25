@@ -1,12 +1,11 @@
 {
-  "homepage": "https://singh8700.github.io/itsme",
+  "homepage": "https://singh8700.github.io/itsme/",
   "name": "portfolios",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
