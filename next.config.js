@@ -5,7 +5,7 @@ const nextConfig = {
     unoptimized: true,
   },
   basePath: '/itsme',
-  assetPrefix: '',
+  assetPrefix: '/itsme/',
   trailingSlash: false ,
 }
 
