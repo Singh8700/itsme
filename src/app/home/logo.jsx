@@ -22,14 +22,16 @@ const LogoSection = () => {
   }, []);
 
   return (
-    <Wrapper $scrolled={scrolled}>
+    <LogoContainer $scrolled={scrolled}>
       <Title>Hey Friend!</Title>
       <Subtitle>Welcome to my portfolio</Subtitle>
-    </Wrapper>
+    </LogoContainer>
   )
 }
 
-const Wrapper = styled.div`
+export default LogoSection
+
+const LogoContainer = styled.div`
 width:100vw;
 display:flex;
 flex-direction:column;
@@ -63,5 +65,3 @@ const Subtitle = styled.small`
   margin-top: 0.25rem;
   font-size: 0.875rem;
 `
-
-export default LogoSection

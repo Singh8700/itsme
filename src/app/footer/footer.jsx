@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <Wrapper>
+    <FooterWrapper>
       <div className="footer-content">
         <div className="footer-section">
           <h3>Portfolio</h3>
@@ -68,11 +68,13 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </Wrapper>
+    </FooterWrapper>
   )
 }
 
-const Wrapper = styled.footer`
+export default Footer
+
+const FooterWrapper = styled.footer`
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   color: var(--foreground);
@@ -229,5 +231,3 @@ const Wrapper = styled.footer`
   }
     
 `
-
-export default Footer
