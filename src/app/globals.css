@@ -29,29 +29,3 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-
-.app-container {
-  min-height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.main-content {
-  flex: 1;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-  position: relative;
-  z-index: 1;
-}
-
-code, pre {
-  font-family: var(--font-roboto-mono), monospace;
-}
-
-.active{
-    background: blue;
-    color:white;
-}

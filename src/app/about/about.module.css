@@ -1,0 +1,210 @@
+.main {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--background);
+  color: var(--foreground);
+  padding-bottom: 100px;
+}
+
+.aboutContainer {
+  width: 85vw;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 4rem 0;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.aboutContainer .aboutContent {
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+.aboutContainer .aboutContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #90EE90, #32CD32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.aboutContainer .aboutContent p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+  opacity: 0.9;
+}
+.aboutContainer .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.span {
+  padding: 0.5rem 1.5rem;
+  background: rgba(144, 238, 144, 0.1);
+  border: 1px solid #90EE90;
+  border-radius: 50px;
+  color: var(--foreground);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.span:hover {
+  background: rgba(144, 238, 144, 0.2);
+  transform: translateY(-2px);
+}
+
+.qualificationContainers {
+  padding: 2rem 2rem 100px 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--foreground);
+}
+.qualificationContainers h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding-top: 2rem;
+  background: linear-gradient(45deg, #90EE90, #32CD32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.qualificationContainers .subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+.qualificationContainers .qualificationContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+  .qualificationContainers .qualificationContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.qualificationContainers h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--foreground);
+}
+.qualificationContainers .timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.qualificationContainers .timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, #90EE90, #32CD32);
+}
+.qualificationContainers .timelineItem {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.qualificationContainers .timelineItem .timelineDot {
+  position: absolute;
+  left: -2.4rem;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #90EE90;
+  border: 2px solid var(--background);
+}
+.qualificationContainers .timelineItem .timelineContent {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(144, 238, 144, 0.2);
+}
+.qualificationContainers .timelineItem .timelineContent .year {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: rgba(144, 238, 144, 0.1);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.qualificationContainers .timelineItem .timelineContent h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #90EE90;
+}
+.qualificationContainers .timelineItem .timelineContent h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+.qualificationContainers .timelineItem .timelineContent p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+.qualificationContainers .timelineItem .timelineContent .grade {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background: rgba(144, 238, 144, 0.2);
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+.qualificationContainers .cards {
+  display: grid;
+  gap: 1.5rem;
+}
+.qualificationContainers .certCard {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(144, 238, 144, 0.2);
+  transition: all 0.3s ease;
+}
+.qualificationContainers .certCard .year {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: rgba(144, 238, 144, 0.1);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.qualificationContainers .certCard h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #90EE90;
+}
+.qualificationContainers .certCard p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+.qualificationContainers .certCard .credential {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background: rgba(144, 238, 144, 0.2);
+  border-radius: 15px;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=about.module.css.map */

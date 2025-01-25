@@ -1,5 +1,6 @@
 "use client"
 import styled from 'styled-components'
+import style from './background.module.css'
 
 const BackgroundPics = () => {
   return (
@@ -8,39 +9,16 @@ const BackgroundPics = () => {
 }
 
 const BackgroundAnimation = () => (
-    <BackgroundWrapper>
+    <div className={style.BackgroundContainer}>
       {[...Array(50)].map((_, i) => (
         <div key={i} className="circle-container">
           <div className="circle"></div>
         </div>
       ))}
-    </BackgroundWrapper>
+    </div>
   );
 
 const BackgroundWrapper = styled.div`
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: 99;
-  
-  .circle-container {
-    position: absolute;
-    transform: translateY(-10vh);
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
-    .circle {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: rgba(128, 128, 128, 0.1);
-      animation: circle-animation 25s infinite;
-    }
-  }
-
   ${[...Array(50)].map((_, i) => `
     .circle-container:nth-child(${i + 1}) {
       width: ${Math.random() * 20 + 10}px;
