@@ -3,9 +3,7 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
-  },
-  basePath: '/itsme',
-  assetPrefix: '/itsme/',
+  }
 }
 
 module.exports = nextConfig
