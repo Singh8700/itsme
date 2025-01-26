@@ -1,4 +1,4 @@
-name: Deploy Next.js Portfolio to GitHub Pages
+name: Deploy Next.js itsme to GitHub Pages
 
 on:
   push:
