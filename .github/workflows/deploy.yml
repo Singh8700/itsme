@@ -29,8 +29,8 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
-          token: ${{ secrets.GH_TOKEN }}  # Use the Personal Access Token
-          enablement: true
+          token: ${{ secrets.GH_TOKEN }}  # Passing the token as a secret here
+          enablement: true  # Automatically enable Pages if it's not already enabled
         
       - name: Install dependencies
         run: npm ci
@@ -52,3 +52,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}  # Again, passing the token for deployment
