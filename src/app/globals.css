@@ -31,3 +31,9 @@ body {
 a{
   text-decoration: none;
 }
+.containers{
+  width: 100svw;
+  height: 100svh;
+  overflow-x: hidden;
+  position: relative;
+}

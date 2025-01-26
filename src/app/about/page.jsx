@@ -3,11 +3,14 @@ import React from 'react'
 import style from './about.module.css'
 import { motion } from 'framer-motion'
 import Qualification from './qualification'
+import Background from '../objects/Background'
 
 const AboutPage = () => {
   return (
    <main className={style.main}>
+   
      <div className={style.aboutContainer}>
+     <Background/>
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
