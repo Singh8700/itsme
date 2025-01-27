@@ -142,4 +142,11 @@
   box-shadow: 1px 1px 5px rgb(0, 0, 0);
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .navSection {
+    width: 350px;
+    padding: 0px 10px;
+  }
 }/*# sourceMappingURL=nav.module.css.map */

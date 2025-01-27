@@ -232,4 +232,18 @@
   .qualificationContainers {
     width: 550px;
   }
+}
+@media screen and (max-width: 660px) {
+  .qualificationContainers {
+    width: 400px;
+  }
+  .qualificationContainers .timelineContent h4 {
+    font-size: 0.4rem;
+  }
+  .qualificationContainers .timelineContent h5 {
+    font-size: 0.3rem;
+  }
+  .qualificationContainers .timelineContent p {
+    font-size: 0.2rem;
+  }
 }/*# sourceMappingURL=about.module.css.map */
