@@ -2,6 +2,7 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderSection from "./home/header"
 import Footer from "./footer/footer"
+import Background from "./objects/Background";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} ${robotoMono.variable}`}
       >
+        <Background/>
         <HeaderSection/>
         <main style={{ minHeight: '100vh', position: 'relative', zIndex: 1 }}>
           {children}

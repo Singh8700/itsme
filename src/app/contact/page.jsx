@@ -3,12 +3,10 @@ import React from 'react'
 import style from './contact.module.css'
 import { FaGithub, FaLinkedin, FaWhatsapp, FaMailBulk, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 import { GrInstagram } from "react-icons/gr"
-import Background from '../objects/Background'
-
 const ContactPage = () => {
   return (
     <div className={style.Warrper}>
-      <Background/>
+  
       <h1>Get in Touch</h1>
       <p className={style.subtitle}>Let's connect and create something amazing together!</p>
       

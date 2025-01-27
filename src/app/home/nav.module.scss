@@ -10,6 +10,7 @@
     transform: translate(-50%, -50%);
     border-radius: 25px;
     width: 450px;
+    height: 75px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     color: #fff;
@@ -110,7 +111,7 @@
             position: absolute;
             width: 8px;
             height: 8px;
-            bottom: -30%;
+            bottom: -40%;
             border-radius: 50%;
             background: red;
             z-index: 0;
@@ -130,14 +131,14 @@
             position: absolute;
             width: 5px;
             height: 6px;
-            bottom: -20%;
+            bottom: -40%;
             border-radius: 50%;
             background: green;
             z-index: 0;
             left:40%;
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 1);
             transform: scale(1);
-            transition: all 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
             }
             }
           

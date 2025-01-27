@@ -1,10 +1,13 @@
 import React from 'react'
 import Background from '../objects/Background'
+import Projects from './project'
+import style from './projects.module.css'
 
 const page = () => {
   return (
-    <div style={{width:"100svw", height:"100svh"}}>
-      <h1>hello</h1>
+    <div className={style.container}>
+      {/* <h1>Projects</h1> */}
+      <Projects/>
     </div>
   )
 }
