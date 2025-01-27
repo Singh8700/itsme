@@ -1,10 +1,12 @@
 .footerContainer {
+  width: 100vw;
   background: rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   color: var(--foreground);
   padding: 4rem;
   position: relative;
+  bottom: 0;
   z-index: 1;
 }
 .footerContainer::before {
@@ -126,7 +128,8 @@
 }
 @media (max-width: 768px) {
   .footerContainer {
-    padding: 3rem;
+    position: relative;
+    bottom: 0;
   }
   .footerContainer .footerSection {
     display: flex;
@@ -139,10 +142,10 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
   }
-  .footerContainer .footerSection {
+  .footerContainer .footerContainer .footerSection {
     margin-bottom: -1rem;
   }
-  .footerContainer .bottomLinks {
+  .footerContainer .footerContainer .bottomLinks {
     margin-bottom: 4rem;
   }
 }/*# sourceMappingURL=footer.module.css.map */

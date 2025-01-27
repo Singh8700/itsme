@@ -1,6 +1,6 @@
-"use client"
-import React from 'react'
-import ThreeDObject from './3dScenes'
+"use client";
+import React from 'react';
+import ThreeDObject from './3dScenes';
 
 const Background = () => {
   // Function to generate a random color in hex format
@@ -14,68 +14,35 @@ const Background = () => {
   };
 
   return (
-    <div style={{width:"100%", height:"100%",position:"absolute"}}>
+    <div style={{ width: "100vw", height: "100vh", position: "absolute", backgroundColor: "transparent" }}>
+      {/* First Object */}
       <ThreeDObject 
         geometry={"TorusGeometry"} 
         material="MeshPhongMaterial"
-        top={"30%"} 
-        left={"20%"} 
-        color={getRandomColor()}  // Set random color
+        color={getRandomColor()}  
         size={6} 
-        maxPosition={3}
+        maxPosition={5}
       />
 
+      {/* Second Object */}
       <ThreeDObject 
         geometry={"TorusKnotGeometry"} 
-        top={"-10%"} 
-        left={"-30%"} 
-        color={getRandomColor()}  // Set random color
+        color={getRandomColor()}  
         size={5} 
-        maxPosition={3}
+        maxPosition={5}
         material={"MeshPhongMaterial"}
       />
 
+      {/* Third Object */}
       <ThreeDObject 
         geometry={"OctahedronGeometry"} 
-        top={"40%"} 
-        left={"70%"} 
-        color={getRandomColor()}  // Set random color
+        color={getRandomColor()}  
         size={12} 
-        maxPosition={3}
+        maxPosition={5}
         material={"MeshPhongMaterial"}
-      />
-
-      <ThreeDObject 
-        geometry={"SphereGeometry"} 
-        top={"10%"} 
-        left={"50%"} 
-        color={getRandomColor()}  // Set random color
-        size={6} 
-        maxPosition={3}
-        material={"MeshPhongMaterial"}
-      />
-
-      <ThreeDObject 
-        geometry={"DodecahedronGeometry"}
-        top={"20%"} 
-        left={"-50%"} 
-        color={getRandomColor()}  // Set random color
-        size={5} 
-        maxPosition={3}
-        material={"MeshLambertMaterial"}
-      />
-
-      <ThreeDObject 
-        geometry={"ExtrudeGeometry"} 
-        top={"60%"} 
-        left={"-40%"} 
-        color={getRandomColor()}  // Set random color
-        size={12} 
-        maxPosition={3}
-        material={"MeshBasicMaterial"}
       />
     </div>
-  )
-}
+  );
+};
 
 export default Background;

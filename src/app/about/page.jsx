@@ -8,9 +8,9 @@ import Background from '../objects/Background'
 const AboutPage = () => {
   return (
    <main className={style.main}>
-   
+    <Background/>
      <div className={style.aboutContainer}>
-     <Background/>
+    
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

@@ -3,6 +3,8 @@
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 100px;
+  overflow: hidden;
+  position: relative;
 }
 .Warrper h1 {
   text-align: center;
@@ -21,6 +23,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
+  overflow-x: hidden;
 }
 @media (max-width: 768px) {
   .contactGrid {
