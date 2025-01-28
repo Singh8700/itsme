@@ -8,7 +8,7 @@ const LogoSection = () => {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (offset > 50) {
+      if (offset >= 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -22,7 +22,7 @@ const LogoSection = () => {
   }, []);
 
   return (
-    <div className={`${style.LogoContainer} ${scrolled ? style.scrolled : ''}`}>
+    <div className={`${style.LogoContainer} ${scrolled ? style.scroll : ''}`}>
       <div className={style.logo}>Hey Friend!</div>
       <div className={style.subtitle}>Welcome to my portfolio</div>
     </div>

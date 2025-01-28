@@ -39,7 +39,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <div className={style.contactForm}>
+        {/* <div className={style.contactForm}>
           <h2>Send Me a Message</h2>
           <form>
             <div className={style.formGroup}>
@@ -56,7 +56,7 @@ const ContactPage = () => {
             </div>
             <button className={style.button} type="submit">Send Message</button>
           </form>
-        </div>
+        </div> */}
       </div>
     </div>
   )

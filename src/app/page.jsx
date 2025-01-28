@@ -3,6 +3,7 @@
 import style from './main.module.css';
 import { motion } from 'framer-motion';
 import Background from './objects/Background';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -22,8 +23,12 @@ export default function Home() {
           <h1>Creative Developer</h1>
           <p>Turning Ideas into Digital Reality</p>
           <div className={style.ctaButtons}>
+            <Link href="/projects">
             <button className={style.primary}>View Projects</button>
-            <button className={style.secondary}>Contact Me</button>
+            </Link>
+            <a href="/pdf/rohitpdf.pdf" download="resume.pdf" target='_blank'>
+            <button className={style.secondary}>Download CV</button>
+            </a>
           </div>
         </motion.div>
       </div>

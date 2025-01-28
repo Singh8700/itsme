@@ -6,11 +6,12 @@
   justify-content: center;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 100;
+  overflow: hidden;
   padding: 1rem 2rem;
   transition: all 0.3s ease-in-out;
-  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .logo {
@@ -27,4 +28,10 @@
   color: #666;
   margin-top: 0.25rem;
   font-size: 0.875rem;
+}
+
+.scroll {
+  background: rgb(0, 0, 0);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }/*# sourceMappingURL=logo.module.css.map */
