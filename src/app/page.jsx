@@ -4,6 +4,7 @@ import style from './main.module.css';
 import { motion } from 'framer-motion';
 import Background from './objects/Background';
 import Link from 'next/link';
+import RandomeColor from "./rendomColor/randomColor"
 
 export default function Home() {
   return (
@@ -20,7 +21,9 @@ export default function Home() {
           className={style.heroContent}
         >
          
-          <h1>Creative Developer</h1>
+          <h1>
+          <RandomeColor content="Creative Developer"/>
+          </h1>
           <p>Turning Ideas into Digital Reality</p>
           <div className={style.ctaButtons}>
             <Link href="/projects">

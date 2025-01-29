@@ -9,6 +9,7 @@ const LogoSection = () => {
  
 
   useEffect(() => {
+      
     const handleScroll = () => {
       const offset = window.scrollY;
       if (offset >= 50) {
@@ -24,14 +25,6 @@ const LogoSection = () => {
     };
   }, []);
   
-    const getRandomColor = () => {
-        const letters = "0123456789ABCDEF";
-        let color = "#";
-        for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      };
       
   return (
     <div className={`${style.LogoContainer} ${scrolled ? style.scroll : ""}`}>
@@ -39,7 +32,7 @@ const LogoSection = () => {
         <h2 style={{
           fontWeight: "bolder",
           fontFamily:"Georgia, 'Times New Roman', Times, serif",
-          background: `linear-gradient(to right, ${getRandomColor()}, ${getRandomColor()})`,
+          background: `linear-gradient(to right, #ef99af,#af0fcf )`,
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
         }}>Hey Friend's!</h2>
