@@ -3,16 +3,20 @@ import React from 'react'
 import style from './contact.module.css'
 import { FaGithub, FaLinkedin, FaWhatsapp, FaMailBulk, FaMapMarkerAlt, FaPhone } from 'react-icons/fa'
 import { GrInstagram } from "react-icons/gr"
+import RandomeColor from '../rendomColor/randomColor'
+import Footer from '../footer/footer'
 const ContactPage = () => {
   return (
+    <>
     <div className={style.Warrper}>
-  
       <h1>Get in Touch</h1>
       <p className={style.subtitle}>Let's connect and create something amazing together!</p>
       
       <div className={style.contactGrid}>
         <div className={style.contactInfo}>
-          <h2>Contact Information</h2>
+          <h2>
+            <RandomeColor content="Contact Information"/>
+          </h2>
           <div className={style.infoItem}>
             <FaMapMarkerAlt />
             <span>Delhi, India</span>
@@ -58,7 +62,10 @@ const ContactPage = () => {
           </form>
         </div> */}
       </div>
+      
     </div>
+    <Footer/>
+    </>
   )
 }
 

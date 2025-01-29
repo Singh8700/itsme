@@ -4,9 +4,11 @@ import style from './main.module.css';
 import { motion } from 'framer-motion';
 import Background from './objects/Background';
 import Link from 'next/link';
+import Footer from './footer/footer';
 
 export default function Home() {
   return (
+    <>
     <div className="containers">
 
     <main className={style.main}>
@@ -34,6 +36,8 @@ export default function Home() {
       </div>
     </main>
     </div>
+    <Footer/>
+    </>
   );
 }
 

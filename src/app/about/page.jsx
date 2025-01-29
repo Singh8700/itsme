@@ -4,9 +4,11 @@ import style from './about.module.css'
 import { motion } from 'framer-motion'
 import Qualification from './qualification'
 import RandomeColor from '../rendomColor/randomColor'
+import Footer from '../footer/footer'
 
 const AboutPage = () => {
   return (
+    <>
    <main className={style.main}>
  
      <div className={style.aboutContainer}>
@@ -31,6 +33,8 @@ const AboutPage = () => {
       </div>
       <Qualification />
    </main>
+   <Footer/>
+   </>
   )
 }
 

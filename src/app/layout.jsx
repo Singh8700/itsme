@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <main style={{ minHeight: '100vh', position: 'relative', zIndex: 1 }}>
           {children}
         </main>
-        <Footer/>
+      {/* <Footer/> */}
       </body>
     </html>
   );

@@ -28,7 +28,9 @@ const LogoSection = () => {
   return (
     <div className={`${style.LogoContainer} ${scrolled ? style.scroll : ""}`}>
       <div className={style.logo}>
-        <RandomeColor content="Hey Friends!"/>
+        <h3 className={style.text}>
+          Hey Friend's!
+        </h3>
       </div>
       <div className={style.subtitle}>Welcome to my portfolio</div>
     </div>

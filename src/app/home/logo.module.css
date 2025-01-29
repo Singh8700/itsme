@@ -1,13 +1,19 @@
+.headerContainer {
+  width: 100vw;
+  height: 80px;
+  position: relative;
+}
+
 .LogoContainer {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   position: fixed;
   top: 0;
-  z-index: 100;
-  overflow: hidden;
+  z-index: 5;
   padding: 1rem 2rem;
   transition: all 0.3s ease-in-out;
   -webkit-backdrop-filter: blur(10px);
@@ -20,10 +26,17 @@
   font-weight: bold;
   margin: 0;
 }
+.logo .text {
+  background: linear-gradient(to right, #90EE90, #50C878);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
 
 .subtitle {
   display: block;
-  color: #666;
+  color: #aaa;
   margin-top: 0.25rem;
   font-size: 0.875rem;
 }

@@ -12,7 +12,7 @@ const Footer = () => {
     <div className={style.footerContainer}>
       <div className={style.footerContent}>
         <div className={style.footerSection}>
-          <RandomeColor content="Portfolio"/>
+          <h3><RandomeColor content="Portfolio"/></h3>
           <p>Building digital experiences with passion and precision.</p>
           <div className={style.socialLinks}>
             <a href="https://github.com/Singh8700" target="_blank" rel="noopener noreferrer">
@@ -31,7 +31,9 @@ const Footer = () => {
         </div>
 
         <div className={style.footerSection}>
+          <h3>
           <RandomeColor content="Quick Links"/>
+          </h3>
           <ul className={style.footerLinks}>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
@@ -41,7 +43,9 @@ const Footer = () => {
         </div>
 
         <div className={style.footerSection}>
+          <h3>
           <RandomeColor content="Services"/>
+          </h3>
           <ul className={style.footerLinks}>
             <li>Web Development</li>
             <li>UI/UX Design</li>
@@ -51,7 +55,9 @@ const Footer = () => {
         </div>
 
         <div className={style.footerSection}>
+          <h3>
           <RandomeColor content="Contact Info"/>
+          </h3>
           <ul className={`${style.footerLinks} ${style.bottomLinks}`}>
             <li>Delhi, India</li>
             <Link href="mailto:rohit.si8700@gemail.com"> 
