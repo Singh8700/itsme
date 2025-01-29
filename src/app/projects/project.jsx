@@ -3,6 +3,7 @@ import React from 'react'
 import style from '../about/about.module.css'
 
 import { motion } from 'framer-motion'
+import RandomeColor from '../rendomColor/randomColor'
 
 const Projects = () => {
     const education = [
@@ -107,12 +108,16 @@ const Projects = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h2>My Journey</h2>
+                <h2>
+                    <RandomeColor content="My Journey"/>
+                </h2>
                 <p className={style.subtitle}>Projects</p>
 
                 <div className={style.qualificationContainer}>
                     <div className={style.educationSection}>
-                        <h3>Live Projects</h3>
+                        <h3 style={{color:"#fff"}}>
+                          <RandomeColor content="Live Projects"/>
+                        </h3>
                         <div className={style.timeline}>
                             {education.map((edu, index) => (
                                 <motion.div
@@ -139,7 +144,9 @@ const Projects = () => {
                     </div>
 
                     <div className={style.certificationSection}>
-                        <h3>Projects</h3>
+                        <h3>
+                            <RandomeColor content="Projects"/>
+                        </h3>
                         <div className={style.cards}>
                             {certifications.map((cert, index) => (
                                 <motion.div

@@ -27,9 +27,12 @@ html,body {
   overflow-x: hidden;
   position: relative;
 }
-
+h1{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 a{
   text-decoration: none;
+  color:#fff;
 }
 .containers{
   width: 100svw;

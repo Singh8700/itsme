@@ -1,9 +1,13 @@
-"use client"
-import React, { useState, useEffect } from 'react'
-import style from './logo.module.css'
+"use client";
+import React, { useState, useEffect } from "react";
+import style from "./logo.module.css";
+import RandomeColor from "../rendomColor/randomColor";
+
 
 const LogoSection = () => {
   const [scrolled, setScrolled] = useState(false);
+
+ 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,18 +19,20 @@ const LogoSection = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div className={`${style.LogoContainer} ${scrolled ? style.scroll : ''}`}>
-      <div className={style.logo}>Hey Friend!</div>
+    <div className={`${style.LogoContainer} ${scrolled ? style.scroll : ""}`}>
+      <div className={style.logo}>
+        <RandomeColor content="Hey Friends!"/>
+      </div>
       <div className={style.subtitle}>Welcome to my portfolio</div>
     </div>
-  )
-}
+  );
+};
 
-export default LogoSection
+export default LogoSection;

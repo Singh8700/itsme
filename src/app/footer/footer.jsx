@@ -3,6 +3,8 @@ import style from "./footer.module.css"
 import { FaGithub, FaLinkedin, FaHeart, FaCode, FaWhatsapp, FaMailBulk } from 'react-icons/fa'
 import { GrInstagram } from "react-icons/gr"
 import Link from 'next/link'
+import RandomeColor from "../rendomColor/randomColor"
+
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
@@ -10,7 +12,7 @@ const Footer = () => {
     <div className={style.footerContainer}>
       <div className={style.footerContent}>
         <div className={style.footerSection}>
-          <h3>Portfolio</h3>
+          <RandomeColor content="Portfolio"/>
           <p>Building digital experiences with passion and precision.</p>
           <div className={style.socialLinks}>
             <a href="https://github.com/Singh8700" target="_blank" rel="noopener noreferrer">
@@ -29,7 +31,7 @@ const Footer = () => {
         </div>
 
         <div className={style.footerSection}>
-          <h3>Quick Links</h3>
+          <RandomeColor content="Quick Links"/>
           <ul className={style.footerLinks}>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link></li>
@@ -39,7 +41,7 @@ const Footer = () => {
         </div>
 
         <div className={style.footerSection}>
-          <h3>Services</h3>
+          <RandomeColor content="Services"/>
           <ul className={style.footerLinks}>
             <li>Web Development</li>
             <li>UI/UX Design</li>
@@ -49,11 +51,15 @@ const Footer = () => {
         </div>
 
         <div className={style.footerSection}>
-          <h3>Contact Info</h3>
+          <RandomeColor content="Contact Info"/>
           <ul className={`${style.footerLinks} ${style.bottomLinks}`}>
             <li>Delhi, India</li>
-            <li>rohit.si8700@gemail.com</li>
-            <li>+91 8700750589</li>
+            <Link href="mailto:rohit.si8700@gemail.com"> 
+              <li>rohit.si8700@gemail.com</li>
+           </Link>
+           <Link href="https://bit.ly/rohit-port"> 
+              <li>+91 8700750589</li>
+           </Link>
           </ul>
         </div>
       </div>

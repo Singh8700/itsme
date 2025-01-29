@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import style from './about.module.css'
-
+import RandomeColor from '../rendomColor/randomColor'
 import { motion } from 'framer-motion'
 
 const Qualification = () => {
@@ -63,12 +63,18 @@ const Qualification = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <h2>My Journey</h2>
-                <p className={style.subtitle}>Educational Background & Certifications</p>
+                <h2>
+                    <RandomeColor content="My Journey"/>
+                </h2>
+                <p className={style.subtitle}>
+                    <RandomeColor content="Educational"/>
+                </p>
 
                 <div className={style.qualificationContainer}>
                     <div className={style.educationSection}>
-                        <h3>Education</h3>
+                        <h3>
+                            <RandomeColor content="Education"/>
+                        </h3>
                         <div className={style.timeline}>
                             {education.map((edu, index) => (
                                 <motion.div
@@ -92,7 +98,9 @@ const Qualification = () => {
                     </div>
 
                     <div className={style.certificationSection}>
-                        <h3>Certifications</h3>
+                        <h3>
+                            <RandomeColor content="Certifications"/>
+                        </h3>
                         <div className={style.cards}>
                             {certifications.map((cert, index) => (
                                 <motion.div
@@ -104,7 +112,7 @@ const Qualification = () => {
                                     whileHover={{ y: -5 }}
                                 >
                                     <span className={style.year}>{cert.year}</span>
-                                    <h4>{cert.title}</h4>
+                                    <h4 className={style.title}>{cert.title}</h4>
                                     <p>{cert.organization}</p>
                                     <span className={style.credential}>ID: {cert.credential}</span>
                                 </motion.div>

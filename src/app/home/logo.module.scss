@@ -12,21 +12,20 @@ overflow:hidden;
   transition: all 0.3s ease-in-out;
 //   background:rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .logo{
     font-size: 2rem;
     font-weight: bold;
     margin: 0;
-    // backdrop-filter: blur(10px);
-    background: linear-gradient(to right, #90EE90, #50C878);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    // backdrop-filter: blur(10px)
 }
 .subtitle{
     display: block;
     color: #666;
     margin-top: 0.25rem;
     font-size: 0.875rem;
+
 }
 .scroll{
     background: rgba(0, 0, 0, 1);

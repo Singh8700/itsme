@@ -3,7 +3,7 @@ import React from 'react'
 import style from './about.module.css'
 import { motion } from 'framer-motion'
 import Qualification from './qualification'
-
+import RandomeColor from '../rendomColor/randomColor'
 
 const AboutPage = () => {
   return (
@@ -17,7 +17,9 @@ const AboutPage = () => {
           transition={{ duration: 0.5 }}
           className={style.aboutContent}
         >
-          <h2>About Me</h2>
+          <h2>
+            <RandomeColor content="About Me"/>
+          </h2>
           <p>I'm a passionate developer who loves creating beautiful and functional web experiences. With expertise in modern web technologies, I bring ideas to life through clean code and intuitive design.</p>
           <div className={style.skills}>
             <div className={style.span}>React</div>

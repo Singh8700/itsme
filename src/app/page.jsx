@@ -26,7 +26,7 @@ export default function Home() {
             <Link href="/projects">
             <button className={style.primary}>View Projects</button>
             </Link>
-            <a href="/pdf/rohitpdf.pdf" download="resume.pdf" target='_blank'>
+            <a href="https://drive.google.com/file/d/1kN0TkCbbTMIHHtxN4ccRSR95TaKBN6Gq/view?usp=drive_link" download="resume.pdf">
             <button className={style.secondary}>Download CV</button>
             </a>
           </div>
