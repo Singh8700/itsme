@@ -19,7 +19,7 @@
     top:0;
     left:0;
     z-index: 1;
-  
+  backdrop-filter: blur(1px);
     .heroContent {
       max-width: 800px;
       padding: 0 20px;
@@ -31,6 +31,7 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: bold;
+        backdrop-filter: blur(2px);
       }
   
       p {

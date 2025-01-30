@@ -16,8 +16,9 @@
   z-index: 5;
   padding: 1rem 2rem;
   transition: all 0.3s ease-in-out;
-  backdrop-filter: blur(10px);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .logo {
@@ -42,6 +43,7 @@
 }
 
 .scroll {
-  background: black;
-  backdrop-filter: blur(10px);
-}
+  background: rgb(0, 0, 0);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}/*# sourceMappingURL=logo.module.css.map */

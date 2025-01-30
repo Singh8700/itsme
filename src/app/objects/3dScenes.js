@@ -24,7 +24,7 @@ const ThreeDObject = (props) => {
 
     // Create the geometry and material for the object
     const geometry = new THREE[props.geometry]();
-    const material = new THREE[props.material]({ color: props.color, wireframe: true });
+    const material = new THREE[props.material]({ color: props.color, wireframe: props.wireframe });
     const object = new THREE.Mesh(geometry, material);
     object.scale.set(1.5, 1.5, 1.5); // Adjust scale if needed
     scene.add(object);
@@ -82,9 +82,11 @@ const ThreeDObject = (props) => {
 
     // Animation loop
     const animate = () => {
+      if(props.animation){
       requestAnimationFrame(animate);
       object.rotation.x += 0.01;
       object.rotation.y += 0.01;
+      }
       renderer.render(scene, camera);
     };
 

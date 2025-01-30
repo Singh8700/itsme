@@ -1,8 +1,11 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ThreeDObject from './3dScenes';
 
 const Background = () => {
+  // State to store random animation values for each object
+ // Empty dependency array ensures this runs only once after the component mounts
+
   // Function to generate a random color in hex format
   const getRandomColor = () => {
     const letters = '0123456789ABCDEF';
@@ -13,6 +16,17 @@ const Background = () => {
     return color;
   };
 
+  const getRandomTrueFalse = () => {
+    return Math.random() < 0.5;
+  }
+  const getRandomSize = () => {
+    return Math.random() * 15;
+  };
+
+  const getMAxPosition = () => {
+    return Math.random() * 6;
+  }
+
   return (
     <div style={{ width: "100vw", height: "100vh", position: "absolute", backgroundColor: "transparent" }}>
       {/* First Object */}
@@ -20,16 +34,19 @@ const Background = () => {
         geometry={"TorusGeometry"} 
         material="MeshPhongMaterial"
         color={getRandomColor()}  
-        size={6} 
-        maxPosition={5}
+        size={getRandomSize()} 
+        wireframe={getRandomTrueFalse()}
+        animation={getRandomTrueFalse}  // Random animation for object 1
       />
 
       {/* Second Object */}
       <ThreeDObject 
-        geometry={"TorusKnotGeometry"} 
+        geometry={"TorusGeometry"} 
         color={getRandomColor()}  
-        size={5} 
-        maxPosition={5}
+        size={getRandomSize()} 
+        wireframe={getRandomTrueFalse()}
+        maxPosition={getMAxPosition()}
+        animation={getRandomTrueFalse()}  // Random animation for object 2
         material={"MeshPhongMaterial"}
       />
 
@@ -37,8 +54,10 @@ const Background = () => {
       <ThreeDObject 
         geometry={"OctahedronGeometry"} 
         color={getRandomColor()}  
-        size={12} 
-        maxPosition={5}
+        size={getRandomSize()} 
+        wireframe={getRandomTrueFalse()}
+        animation={getRandomTrueFalse()}  // Random animation for object 3
+        maxPosition={getMAxPosition()}
         material={"MeshPhongMaterial"}
       />
     </div>
