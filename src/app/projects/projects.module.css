@@ -1,9 +1,351 @@
-.container {
-  width: 100svw;
+.main {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  margin-top: 8%;
+  padding-bottom: 100px;
+  overflow: hidden;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.aboutContainer {
+  width: 100vw;
+  min-height: calc(100vh - 100px);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 0;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.aboutContainer .aboutContent {
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow-y: hidden;
+}
+.aboutContainer .aboutContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #90EE90, #32CD32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.aboutContainer .aboutContent p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+  opacity: 0.9;
+}
+.aboutContainer .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.span {
+  padding: 0.5rem 1.5rem;
+  background: rgba(144, 238, 144, 0.1);
+  border: 1px solid #90EE90;
+  border-radius: 50px;
+  color: var(--foreground);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.span:hover {
+  background: rgba(144, 238, 144, 0.2);
+  transform: translateY(-2px);
+}
+
+.qualificationContainers {
+  width: 100vw;
+  padding: 2rem 2rem 100px 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  background: transparent;
+}
+.qualificationContainers h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  padding-top: 2rem;
+  background: linear-gradient(45deg, #90EE90, #32CD32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.qualificationContainers .subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+.qualificationContainers .contentSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 5rem;
+}
+.qualificationContainers .qualificationContainer {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 5rem;
+}
+@media (max-width: 768px) {
+  .qualificationContainers .qualificationContainer {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.qualificationContainers h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--foreground);
+}
+.qualificationContainers .timeline {
+  position: relative;
+  padding-left: 2rem;
+  transform-style: preserve-3d;
+  perspective: 700px;
+  transition: all 0.3s ease;
+}
+.qualificationContainers .timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, #90EE90, #32CD32);
+}
+.qualificationContainers .timelineItem {
+  width: 500px;
+  position: relative;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qualificationContainers .timelineItem .timelineDot {
+  position: absolute;
+  left: -2.4rem;
+  top: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #90EE90;
+  border: 2px solid var(--background);
+}
+.qualificationContainers .timelineItem .timelineContent {
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(144, 238, 144, 0.2);
+}
+.qualificationContainers .timelineItem .timelineContent .year {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: rgba(144, 238, 144, 0.1);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.qualificationContainers .timelineItem .timelineContent h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #90EE90;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+}
+.qualificationContainers .timelineItem .timelineContent h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+.qualificationContainers .timelineItem .timelineContent p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+.qualificationContainers .timelineItem .timelineContent a {
+  color: var(--foreground);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.qualificationContainers .timelineItem .timelineContent a:hover {
+  color: #90EE90;
+}
+.qualificationContainers .timelineItem .timelineContent .grade {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background: rgba(144, 238, 144, 0.2);
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+.qualificationContainers .timelineItem .timelineContent .btn {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+.qualificationContainers .timelineItem .images {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  top: 10%;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qualificationContainers .timelineItem .images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.qualificationContainers .timelineItem .model {
+  width: 200px;
+  height: 100%;
+  border-radius: 10%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0%;
+  right: 0px;
+  z-index: -50;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.qualificationContainers .timelineItem .model img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 10%;
+  top: 10%;
+  z-index: -1;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.qualificationContainers .timelineItem .model span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+.qualificationContainers .timelineItem .third img {
+  width: 100%;
+  height: 100%;
+}
+.qualificationContainers .timelineItem .first img {
+  width: 100%;
+  height: 150%;
+}
+.qualificationContainers .certificationSection {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+.qualificationContainers .certificationSection .cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.qualificationContainers .certificationSection .certCard {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(144, 238, 144, 0.2);
+  transition: all 0.3s ease;
+}
+.qualificationContainers .certificationSection .certCard .year {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  background: rgba(144, 238, 144, 0.1);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.qualificationContainers .certificationSection .certCard .title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #90EE90;
+  word-break: keep-all;
+  -ms-word-break: keep-all;
+}
+.qualificationContainers .certificationSection .certCard p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+.qualificationContainers .certificationSection .certCard .credential {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background: rgba(144, 238, 144, 0.2);
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .qualificationContainers {
+    width: 550px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .qualificationContainers {
+    width: 400px;
+  }
+  .qualificationContainers .timelineContent h4 {
+    font-size: 0.4rem;
+  }
+  .qualificationContainers .timelineContent h5 {
+    font-size: 0.3rem;
+  }
+  .qualificationContainers .timelineContent p {
+    font-size: 0.2rem;
+  }
 }/*# sourceMappingURL=projects.module.css.map */

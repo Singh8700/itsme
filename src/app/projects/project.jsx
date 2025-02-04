@@ -1,11 +1,11 @@
+
 "use client"
 import React from 'react'
-import style from '../about/about.module.css'
-
-import { motion } from 'framer-motion'
+import style from './projects.module.css'
 import RandomeColor from '../rendomColor/randomColor'
+import { motion } from 'framer-motion'
 
-const Projects = () => {
+const Qualification = () => {
     const education = [
         {
             year: "Online Post App (Node.js)",
@@ -13,7 +13,8 @@ const Projects = () => {
             institution: "Post App",
             description: "To learn full-stack development with Node.js, Express, and MongoDB.",
             grade: "Jan 2025",
-            live: "https://singh8700.github.io/postapp/"
+            live: "https://singh8700.github.io/postapp/",
+            models: "./imgs/pic01.png"
         },
         {
             year: "CRUD Application",
@@ -21,7 +22,8 @@ const Projects = () => {
             institution: "Application",
             description: "To practice full-stack development, integrating frontend with React.js and backend with Node.js and MongoDB.",
             grade: "Dec 2024",
-            live: "https://authapp-3d4v.onrender.com"
+            live: "https://authapp-3d4v.onrender.com",
+            models: "./imgs/pic02.png"
         },
         {
             year: "Mini Project Post Create",
@@ -29,7 +31,8 @@ const Projects = () => {
             institution: "Application",
             description: " To practice building a full-stack application with React.js for the frontend and Node.js for the backend.",
             grade: "Dec 2024",
-            live: "https://mini-project-01.onrender.com/"
+            live: "https://mini-project-01.onrender.com/",
+            models: "./imgs/pic03.png"
         },
         {
             year: "Web Games App",
@@ -73,103 +76,118 @@ const Projects = () => {
         }
     ]
 
-    const certifications = [
-        {
-            year: "Poster's",
-            title: "Photoshop Project",
-            organization: "Client Template",
-            credential: "FREE"
-        },
-        {
-            year: "Logo's",
-            title: "Corel & Photoshop",
-            organization: "Student Projects Building",
-            credential: "FREE"
-        },
-        {
-            year: "Video's",
-            title: "Social Media Marketing",
-            organization: "Client & Advertiser",
-            credential: "FREE"
-        },
-        {
-            year: "FB, Insta, Google Ads",
-            title: `Running the crypto ads on social media
-                     differnt different platforms`, 
-            organization: "LEARN VEARN",
-            credential: "FREE"
-        }
-    ]
 
-    return (
-        <div className={style.qualificationContainers}>
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-            >
-                <h2>
-                    <RandomeColor content="My Journey"/>
-                </h2>
-                <p className={style.subtitle}>Projects</p>
+  const certifications = [
+    {
+      year: "2017",
+      title: "Advance Computer Course",
+      organization: "RIIT INFOTECH PVT LTD",
+      credential: "RIIT/666"
+    },
+    {
+      year: "2017 - 18",
+      title: "Web Design, Corel, Photoshop, TallyPrime",
+      organization: "RIIT INFOTECH",
+      credential: "RIIT/666"
+    },
+    {
+      year: "2019",
+      title: "Web Development (coding + hosting )",
+      organization: "LEARN VEARN",
+      credential: "FREE"
+    },
+    {
+      year: "2019 - 2020",
+      title: "Web Development (REACT JS Libraray to emprove)",
+      organization: "LEARN VEARN",
+      credential: "FREE"
+    }
+  ]
 
-                <div className={style.qualificationContainer}>
-                    <div className={style.educationSection}>
-                        <h3 style={{color:"#fff"}}>
-                          <RandomeColor content="Live Projects"/>
-                        </h3>
-                        <div className={style.timeline}>
-                            {education.map((edu, index) => (
-                                <motion.div
-                                    key={index}
-                                    className={style.timelineItem}
-                                    initial={{ opacity: 0, x: -50 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.5, delay: index * 0.2 }}
-                                >
-                                    <div className={style.timelineDot}></div>
-                                    <div className={style.timelineContent}>
-                                        <span className={style.year}>{edu.year}</span>
-                                        <h4>{edu.degree}</h4>
-                                        <h5>{edu.institution}</h5>
-                                        <p>{edu.description}</p>
-                                        <div className={style.btn}>
-                                        <a href={edu.live} target="_blank" rel="noopener noreferrer" className={style.grade}>Live</a>
-                                        <span className={style.grade}>{edu.grade}</span>
-                                        </div>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
+  return (
+    <div className={style.qualificationContainers}>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <h2>
+          <RandomeColor content="My Journey" />
+        </h2>
+        <p className={style.subtitle}>
+          <RandomeColor content="Educational" />
+        </p>
+    <div className={style.contentSection}>
+    <div className={style.qualificationContainer}>
+          <div className={style.educationSection}>
+            <h3>
+              <RandomeColor content="Education" />
+            </h3>
+            <div className={style.timeline}>
+              {education.map((edu, index) => (
+                <motion.div
+                  key={index}
+                  className={style.timelineItem}
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                >
+                    
+                  <div className={style.timelineDot}></div>
+                  <div className={style.timelineContent}>
+                  {edu.models && (
+                    <motion.div className={`${style.model} ${index === 2 ? style.third : ""} ${index === 0 ? style.first : ""}`}
+                      initial={{ opacity: 0, y: -20, scale: 0 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <span></span>
+                      <img src={edu.models} alt={edu.degree} />
+                    </motion.div>
+                  )}
+                    <span className={style.year}>{edu.year}</span>
+                    <h4>{edu.degree}</h4>
+                    <h5>{edu.institution}</h5>
+                    <p>{edu.description}</p>
+                    <span className={style.grade}>{edu.grade}</span>
+                  </div>
+                  
+                </motion.div>
+              ))}
+            </div>
+          </div>
 
-                    <div className={style.certificationSection}>
-                        <h3>
-                            <RandomeColor content="Projects"/>
-                        </h3>
-                        <div className={style.cards}>
-                            {certifications.map((cert, index) => (
-                                <motion.div
-                                    key={index}
-                                    className={style.certCard}
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                                    whileHover={{ y: -5 }}
-                                >
-                                    <span className={style.year}>{cert.year}</span>
-                                    <h4 className={style.title}>{cert.title}</h4>
-                                    <p>{cert.organization}</p>
-                                    <span className={style.credential}>ID: {cert.credential}</span>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </motion.div>
         </div>
-    )
+
+        <div className={style.certificationSection}>
+            <h3>
+              <RandomeColor content="Certifications" />
+            </h3>
+            <div className={style.cards}>
+              {certifications.map((cert, index) => (
+                <motion.div
+                  key={index}
+                  className={style.certCard}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <span className={style.year}>{cert.year}</span>
+                  <h4 className={style.title}>{cert.title}</h4>
+                  <p>{cert.organization}</p>
+                  <span className={style.credential}>ID: {cert.credential}</span>
+                </motion.div>
+              ))}
+            </div>
+      </div>
+      </div>
+      </motion.div>
+
+      
+    </div>
+  )
 }
 
 
-export default Projects
+export default Qualification

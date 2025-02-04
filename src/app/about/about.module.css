@@ -10,7 +10,7 @@
 }
 
 .aboutContainer {
-  width: 90vw;
+  width: 100vw;
   min-height: calc(100vh - 100px);
   display: flex;
   align-items: center;
@@ -67,8 +67,14 @@
 }
 
 .qualificationContainers {
+  width: 100vw;
   padding: 2rem 2rem 100px 2rem;
   max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   margin: 0 auto;
   background: transparent;
 }
@@ -87,15 +93,23 @@
   margin-bottom: 3rem;
   opacity: 0.8;
 }
+.qualificationContainers .contentSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 5rem;
+}
 .qualificationContainers .qualificationContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  margin-top: 2rem;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 5rem;
 }
 @media (max-width: 768px) {
   .qualificationContainers .qualificationContainer {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 2rem;
   }
 }
@@ -108,6 +122,9 @@
 .qualificationContainers .timeline {
   position: relative;
   padding-left: 2rem;
+  transform-style: preserve-3d;
+  perspective: 700px;
+  transition: all 0.3s ease;
 }
 .qualificationContainers .timeline::before {
   content: "";
@@ -119,8 +136,9 @@
   background: linear-gradient(to bottom, #90EE90, #32CD32);
 }
 .qualificationContainers .timelineItem {
+  width: 500px;
   position: relative;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 .qualificationContainers .timelineItem .timelineDot {
   position: absolute;
@@ -185,11 +203,96 @@
   justify-content: flex-start;
   align-items: center;
 }
-.qualificationContainers .cards {
-  display: grid;
-  gap: 1.5rem;
+.qualificationContainers .timelineItem .images {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: absolute;
+  top: 10%;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.qualificationContainers .certCard {
+.qualificationContainers .timelineItem .images img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.qualificationContainers .timelineItem .model {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 10%;
+  right: 0px;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qualificationContainers .timelineItem .model img {
+  width: 90%;
+  height: 150%;
+  position: absolute;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 10%;
+  z-index: 10;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.qualificationContainers .timelineItem .third {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: absolute;
+  top: 10%;
+  right: 0px;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qualificationContainers .timelineItem .third img {
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 10%;
+  z-index: 10;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.qualificationContainers .certificationSection {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+.qualificationContainers .certificationSection .cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.qualificationContainers .certificationSection .certCard {
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(10px);
@@ -200,7 +303,7 @@
   border: 1px solid rgba(144, 238, 144, 0.2);
   transition: all 0.3s ease;
 }
-.qualificationContainers .certCard .year {
+.qualificationContainers .certificationSection .certCard .year {
   display: inline-block;
   padding: 0.3rem 1rem;
   background: rgba(144, 238, 144, 0.1);
@@ -208,19 +311,19 @@
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
-.qualificationContainers .certCard .title {
+.qualificationContainers .certificationSection .certCard .title {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #90EE90;
   word-break: keep-all;
   -ms-word-break: keep-all;
 }
-.qualificationContainers .certCard p {
+.qualificationContainers .certificationSection .certCard p {
   font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 0.5rem;
 }
-.qualificationContainers .certCard .credential {
+.qualificationContainers .certificationSection .certCard .credential {
   display: inline-block;
   padding: 0.2rem 0.8rem;
   background: rgba(144, 238, 144, 0.2);

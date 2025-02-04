@@ -7,10 +7,8 @@ import Footer from '../footer/footer'
 const page = () => {
   return (
     <>
-    <div className={style.container}>
       {/* <h1>Projects</h1> */}
       <Projects/>
-    </div>
     <Footer/>
     </>
   )

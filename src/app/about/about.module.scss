@@ -9,7 +9,7 @@
 }
 
 .aboutContainer {
-    width: 90vw;
+    width: 100vw;
     min-height: calc(100vh - 100px);
     display: flex;
     align-items: center;
@@ -73,9 +73,14 @@
 }
 
 .qualificationContainers {
-    // width: 450px;
+    width: 100vw;
     padding: 2rem 2rem 100px 2rem;
     max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 0 auto;
     // color: var(--foreground);
     background: transparent;
@@ -96,15 +101,23 @@
         margin-bottom: 3rem;
         opacity: 0.8;
     }
-
+    .contentSection{
+        width:100%;
+        display:flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 5rem;
+    }
     .qualificationContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        margin-top: 2rem;
+        width: 500px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        gap: 5rem;
+        // background: red;
 
         @media (max-width: 768px) {
-            grid-template-columns: 1fr;
+            flex-direction: column;
             gap: 2rem;
         }
     }
@@ -119,7 +132,9 @@
     .timeline {
         position: relative;
         padding-left: 2rem;
-
+        transform-style: preserve-3d;
+        perspective: 700px;
+        transition: all 0.3s ease;
         &::before {
             content: '';
             position: absolute;
@@ -132,8 +147,9 @@
     }
 
     .timelineItem {
+        width: 500px;
         position: relative;
-        padding-bottom: 2rem;
+        padding-bottom: 5rem;
 
         .timelineDot {
             position: absolute;
@@ -206,13 +222,98 @@
                 align-items: center;
             }
         }
-    }
+        .images{
+            width: 150px;
+            height: 150px;
+            border-radius: 10%;
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top:10%;
+            right:0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // transform: rotate(10deg);
+            // transition: all 0.3s ease;
+            img{
+                width:100%;
+                height:100%;
+                object-fit: cover;
+                border-radius: 10%;
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+            }
 
-    .cards {
-        display: grid;
-        gap: 1.5rem;
+          }
+          .model{
+            width: 150px;
+            height: 150px;
+            border-radius: 10%;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top:10%;
+            right:0px;
+            overflow: visible;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // transform: rotate(10deg);
+            // transition: all 0.3s ease;
+            img{
+                width:90%;
+                height:150%;
+                position: absolute;
+                object-fit: fill;
+                border-radius: 10%;
+                z-index: 10;
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+            }
+          }
+          .third{
+            width: 150px;
+            height: 150px;
+            border-radius: 10%;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            top:10%;
+            right:0px;
+            overflow: visible;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // transform: rotate(10deg);
+            // transition: all 0.3s ease;
+            img{
+                width:150%;
+                height:150%;
+                position: absolute;
+                object-fit: fill;
+                border-radius: 10%;
+                z-index: 10;
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+            }
+          }
     }
-
+    .certificationSection{
+        width: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        padding-bottom: 2rem;
+    .cards{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
     .certCard {
         width: 100%;
         background: rgba(255, 255, 255, 0.05);
@@ -222,7 +323,6 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(144, 238, 144, 0.2);
         transition: all 0.3s ease;
-
         .year {
             display: inline-block;
             padding: 0.3rem 1rem;
@@ -256,7 +356,7 @@
     }
 
 }
-
+}
 @media screen and (max-width: 768px) {
     .qualificationContainers {
         width: 550px;
