@@ -20,7 +20,7 @@ export default function Home() {
      animate={{ opacity: 1, y: 0 }}
      transition={{ duration: 0.8 }}>
       <span></span>
-      <img src={`${randNumber == 0 ? '/imgs/pic03.png' : '/imgs/pic02.png'}`} alt="itsme" />
+      <img src={`${randNumber == 0 ? './imgs/pic03.png' : './imgs/pic02.png'}`} alt="itsme" />
     </motion.div>
       <div className={style.wrapper}>
         

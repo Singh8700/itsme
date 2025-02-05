@@ -101,16 +101,16 @@ const Qualification = () => {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.5 }}
                   >
+                    <span></span>
                     <img src={edu.models} alt={edu.degree} />
                   </motion.div>
                 </motion.div>
               ))}
             </div>
           </div>
+    </div>
 
-        </div>
-
-        <div className={style.certificationSection}>
+    <div className={style.certificationSection}>
             <h3>
               <RandomeColor content="Certifications" />
             </h3>
@@ -131,7 +131,7 @@ const Qualification = () => {
                 </motion.div>
               ))}
             </div>
-      </div>
+    </div>
       </div>
       </motion.div>
 

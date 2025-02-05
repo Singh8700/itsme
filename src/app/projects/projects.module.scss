@@ -1,87 +1,9 @@
-.main {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding-bottom: 100px;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-}
-
-.aboutContainer {
-    width: 100vw;
-    min-height: calc(100vh - 100px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    // background: red;
-    padding: 4rem 0;
-    margin: 0 auto;
-    margin-top: 2rem;
-    // background: blue;
-
-    .aboutContent {
-        max-width: 800px;
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        overflow-y: hidden;
-
-        // background: red;
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #90EE90, #32CD32);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            color: var(--foreground);
-            opacity: 0.9;
-        }
-    }
-
-    .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-}
-
-.span {
-    padding: 0.5rem 1.5rem;
-    background: rgba(144, 238, 144, 0.1);
-    border: 1px solid #90EE90;
-    border-radius: 50px;
-    color: var(--foreground);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-
-    &:hover {
-        background: rgba(144, 238, 144, 0.2);
-        transform: translateY(-2px);
-    }
-}
 
 .qualificationContainers {
     width: 100vw;
     padding: 2rem 2rem 100px 2rem;
     max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
+   margin:0% auto 0;
     position: relative;
     // color: var(--foreground);
     background: transparent;
@@ -104,18 +26,20 @@
     }
     .contentSection{
         width:100%;
-        display:flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        gap: 5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // grid-template-rows: 1fr 1fr;
+        gap: 3rem;
+        margin-top: 0;
+       
     }
     .qualificationContainer {
-        width: 500px;
+       
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: flex-start;
         gap: 5rem;
-        // background: red;
+        
 
         @media (max-width: 768px) {
             flex-direction: column;
@@ -148,12 +72,12 @@
     }
 
     .timelineItem {
-        width: 500px;
+        width: 100%;
         position: relative;
         padding-bottom: 5rem;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
 
         .timelineDot {
             position: absolute;
@@ -167,6 +91,7 @@
         }
 
         .timelineContent {
+            width: 100%;
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             padding: 1.5rem;
@@ -303,19 +228,14 @@
             }
           }
     }
+  
     .certificationSection{
-        width: 450px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 2rem;
-        padding-bottom: 2rem;
+      
     .cards{
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         gap: 2rem;
     }
@@ -362,16 +282,21 @@
 
 }
 }
+
 @media screen and (max-width: 768px) {
-    .qualificationContainers {
-        width: 550px;
+    .contentSection{
+        grid-template-columns: 1fr;
+        
     }
+
 }
+
 
 @media screen and (max-width: 660px) {
     .qualificationContainers {
-        width: 400px;
-
+        .contentSection{
+            grid-template-columns: 1fr;
+        }
         .timelineContent {
             h4 {
                 font-size: 0.4rem;
@@ -385,5 +310,8 @@
                 font-size: 0.2rem;
             }
         }
+    }
+    .qualificationContainer,.certificationSection{
+        width:330px;
     }
 }
