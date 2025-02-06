@@ -177,22 +177,20 @@
 
           }
           .model{
-            width: 200px;
-            height: 100%;
+            width: 150px;
+            height: 220px;
             border-radius: 10%;
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+            // -webkit-backdrop-filter: blur(10px);
+            // backdrop-filter: blur(10px);
             position: absolute;
             top:0%;
-            right:0px;
-            z-index: -50;
-            overflow: visible;
+            left:85%;
+            z-index: 10;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            // transform: rotate(10deg);
-            // transition: all 0.3s ease;
+            overflow: visible;
+          
             img{
                 width:100%;
                 height:100%;
@@ -200,7 +198,7 @@
                 object-fit: fill;
                 border-radius: 10%;
                 top:10%;
-                z-index:-1;
+                z-index:1;
                 -webkit-backdrop-filter: blur(10px);
                 backdrop-filter: blur(10px);
             }
@@ -209,9 +207,9 @@
                 width:100%;
                 height:100%;
                 border-radius: 10%;
-                background: rgba(0, 0, 0, 0.8);
+                // background: rgba(0, 0, 0, 0.2);
                 // backdrop-filter: blur(10px);
-                z-index: 10;
+                z-index: -1;
             }
           }
           .third{
@@ -223,8 +221,8 @@
           }
           .first{
             img{
-                width:100%;
-                height:150%;
+                width:80%;
+                height:100%;
             }
           }
     }
@@ -238,6 +236,8 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 2rem;
+        position: relative;
+        z-index: -1;
     }
     .certCard {
         width: 100%;
@@ -283,12 +283,31 @@
 }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 990px) {
+    .qualificationContainers {
     .contentSection{
-        grid-template-columns: 1fr;
-        
+        grid-template-columns: 1fr 1fr;
     }
-
+    .timelineItem{
+        grid-template-columns: 1fr;
+        .model{
+            width: 60%;
+            height: 100%;
+            // background: blue;
+            position: absolute;
+            top:0%;
+            left:80%;
+            overflow: visible;
+            // z-index: 99;
+            span{
+                background: none;
+            }
+            img{
+                z-index: 100;
+            }
+        }
+    }
+}
 }
 
 
@@ -296,22 +315,43 @@
     .qualificationContainers {
         .contentSection{
             grid-template-columns: 1fr;
-        }
         .timelineContent {
+            max-width: 100%;
+            // background: red;
+            .year{
+                font-size: 0.8rem;
+                margin-left: 0px;
+            }
             h4 {
-                font-size: 0.4rem;
+                font-size: 1.2rem;
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
             }
 
             h5 {
-                font-size: 0.3rem;
+                font-size: 0.8rem;
             }
 
             p {
-                font-size: 0.2rem;
+                font-size: 1rem;
+                position: relative;
+                z-index: 99;
+            }
+        }
+       
+    }
+    
+    .timelineItem{
+        .model{
+            left:55%;
+            span{
+                height: 100%;
+            }
+            img{
+                width:75%;
             }
         }
     }
-    .qualificationContainer,.certificationSection{
-        width:330px;
-    }
+    
+}
 }

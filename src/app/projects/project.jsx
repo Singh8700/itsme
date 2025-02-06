@@ -23,7 +23,7 @@ const Qualification = () => {
             description: "To practice full-stack development, integrating frontend with React.js and backend with Node.js and MongoDB.",
             grade: "Dec 2024",
             live: "https://authapp-3d4v.onrender.com",
-            models: "./imgs/pic02.png"
+            models: "./imgs/pic03.png"
         },
         {
             year: "Mini Project Post Create",
@@ -32,13 +32,13 @@ const Qualification = () => {
             description: " To practice building a full-stack application with React.js for the frontend and Node.js for the backend.",
             grade: "Dec 2024",
             live: "https://mini-project-01.onrender.com/",
-            models: "./imgs/pic03.png"
+            models: "./imgs/pic02.png"
         },
         {
             year: "Web Games App",
             degree: "Predict dice rolls to earn points. 5 chances, correct gives +5, wrong gives -1 points.",
             institution: "Dice Game",
-            description: "JS, ReactJs",
+            description: "Predict dice rolls to earn points. 5 chances, correct gives +5, wrong gives -1 points.",
             grade: "Sep 2023",
             live: "https://singh8700.github.io/DiecsGame/"
         },
@@ -46,7 +46,7 @@ const Qualification = () => {
             year: "Image Search App",
             degree: "Search and download live images with ease in this simple web app.",
             institution: " Images Search Web App",
-            description: "ReactJs,Image API",
+            description: "Search and download live images with ease in this simple web app.",
             grade: "Jul 2023",
             live:"https://singh8700.github.io/imgsearch/"
         },
@@ -104,6 +104,16 @@ const Qualification = () => {
     }
   ]
 
+  const truncateContent = (content, length) => {
+    
+    if(window.innerWidth >= "690"){
+      return content;
+  }else if (content.length > length) {
+    return content.slice(0, length) + '...';  // Add ellipsis if content is too long
+   }
+    
+  };
+
   return (
     <div className={style.qualificationContainers}>
       <motion.div
@@ -146,7 +156,7 @@ const Qualification = () => {
                     </motion.div>
                   )}
                     <span className={style.year}>{edu.year}</span>
-                    <h4>{edu.degree}</h4>
+                    <h4>{truncateContent(edu.degree,50)}</h4>
                     <h5>{edu.institution}</h5>
                     <p>{edu.description}</p>
                     <span className={style.grade}>{edu.grade}</span>

@@ -8,6 +8,7 @@ const page = () => {
   return (
     <>
       {/* <h1>Projects</h1> */}
+  
     <Projects/>
     <Footer/>
     </>
