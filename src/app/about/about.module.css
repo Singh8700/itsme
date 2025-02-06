@@ -5,8 +5,7 @@
   position: relative;
   padding-bottom: 100px;
   overflow: hidden;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .aboutContainer {
@@ -21,16 +20,17 @@
   margin: 0 auto;
   margin-top: 2rem;
 }
+
 .aboutContainer .aboutContent {
   max-width: 800px;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   overflow-y: hidden;
 }
+
 .aboutContainer .aboutContent h2 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -38,6 +38,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .aboutContainer .aboutContent p {
   font-size: 1.2rem;
   line-height: 1.8;
@@ -45,6 +46,7 @@
   color: var(--foreground);
   opacity: 0.9;
 }
+
 .aboutContainer .skills {
   display: flex;
   flex-wrap: wrap;
@@ -61,22 +63,23 @@
   font-size: 1rem;
   transition: all 0.3s ease;
 }
+
 .span:hover {
   background: rgba(144, 238, 144, 0.2);
   transform: translateY(-2px);
 }
 
 .qualificationContainers {
-  width: 100vw;
-  padding: 0 2rem 100px 2rem;
+  width: 80vw;
   max-width: 1200px;
-  margin: 0% auto 0;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: transparent;
+  margin: 0 auto;
 }
+
 .qualificationContainers h2 {
   font-size: 2.5rem;
   text-align: center;
@@ -86,47 +89,51 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .qualificationContainers .subtitle {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 3rem;
   opacity: 0.8;
 }
+
 .qualificationContainers .contentSection {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 0;
+  place-content: center;
   place-items: center;
+  gap: 5rem;
 }
+
 .qualificationContainers .qualificationContainer {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   gap: 5rem;
 }
-@media (max-width: 768px) {
-  .qualificationContainers .qualificationContainer {
-    flex-direction: column;
-    gap: 2rem;
-  }
-}
+
 .qualificationContainers h3 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
   text-align: center;
   color: var(--foreground);
 }
+
 .qualificationContainers .timeline {
   position: relative;
   padding-left: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   transform-style: preserve-3d;
   perspective: 700px;
   transition: all 0.3s ease;
 }
+
 .qualificationContainers .timeline::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -134,10 +141,12 @@
   width: 2px;
   background: linear-gradient(to bottom, #90EE90, #32CD32);
 }
+
 .qualificationContainers .timelineItem {
   position: relative;
   padding-bottom: 5rem;
 }
+
 .qualificationContainers .timelineItem .timelineDot {
   position: absolute;
   left: -2.4rem;
@@ -148,16 +157,17 @@
   background: #90EE90;
   border: 2px solid var(--background);
 }
+
 .qualificationContainers .timelineItem .timelineContent {
-  width: 100%;
   background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(144, 238, 144, 0.2);
+  position: relative;
 }
+
 .qualificationContainers .timelineItem .timelineContent .year {
   display: inline-block;
   padding: 0.3rem 1rem;
@@ -166,29 +176,37 @@
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
+
 .qualificationContainers .timelineItem .timelineContent h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #90EE90;
 }
+
 .qualificationContainers .timelineItem .timelineContent h5 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   opacity: 0.9;
+  position: relative;
+  z-index: 9999;
 }
+
 .qualificationContainers .timelineItem .timelineContent p {
   font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 0.5rem;
 }
+
 .qualificationContainers .timelineItem .timelineContent a {
   color: var(--foreground);
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
 .qualificationContainers .timelineItem .timelineContent a:hover {
   color: #90EE90;
 }
+
 .qualificationContainers .timelineItem .timelineContent .grade {
   display: inline-block;
   padding: 0.2rem 0.8rem;
@@ -196,34 +214,37 @@
   border-radius: 15px;
   font-size: 0.9rem;
 }
+
 .qualificationContainers .timelineItem .timelineContent .btn {
   display: flex;
   gap: 1rem;
   justify-content: flex-start;
   align-items: center;
 }
+
 .qualificationContainers .timelineItem .images {
   width: 150px;
   height: 150px;
   border-radius: 10%;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   position: absolute;
-  top: 0%;
+  top: 10%;
   right: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .qualificationContainers .timelineItem .images img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10%;
+  position: absolute;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
+
 .qualificationContainers .timelineItem .model {
   width: 150px;
   height: 150px;
@@ -235,33 +256,21 @@
   right: 0px;
   overflow: visible;
   display: flex;
-  z-index: -99;
   justify-content: center;
   align-items: center;
 }
-.qualificationContainers .timelineItem .model span {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: fill;
-  object-fit: fill;
-  border-radius: 10%;
-  background: rgba(0, 0, 0, 0.5);
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
+
 .qualificationContainers .timelineItem .model img {
   width: 90%;
   height: 150%;
   position: absolute;
-  -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
   border-radius: 10%;
-  z-index: -10;
+  z-index: -100;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
+
 .qualificationContainers .timelineItem .third {
   width: 150px;
   height: 150px;
@@ -276,17 +285,25 @@
   justify-content: center;
   align-items: center;
 }
+
 .qualificationContainers .timelineItem .third img {
   width: 150%;
   height: 150%;
   position: absolute;
-  -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
   border-radius: 10%;
   z-index: -10;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
+
+@media (max-width: 768px) {
+  .qualificationContainers .timelineContent h5 {
+    position: relative;
+    z-index: 999;
+  }
+}
+
 .qualificationContainers .certificationSection {
   display: flex;
   justify-content: center;
@@ -295,6 +312,7 @@
   gap: 2rem;
   padding-bottom: 2rem;
 }
+
 .qualificationContainers .certificationSection .cards {
   width: 100%;
   display: flex;
@@ -303,17 +321,18 @@
   flex-direction: column;
   gap: 2rem;
 }
+
 .qualificationContainers .certificationSection .certCard {
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(144, 238, 144, 0.2);
   transition: all 0.3s ease;
 }
+
 .qualificationContainers .certificationSection .certCard .year {
   display: inline-block;
   padding: 0.3rem 1rem;
@@ -322,6 +341,7 @@
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
+
 .qualificationContainers .certificationSection .certCard .title {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -329,11 +349,13 @@
   word-break: keep-all;
   -ms-word-break: keep-all;
 }
+
 .qualificationContainers .certificationSection .certCard p {
   font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 0.5rem;
 }
+
 .qualificationContainers .certificationSection .certCard .credential {
   display: inline-block;
   padding: 0.2rem 0.8rem;
@@ -342,20 +364,9 @@
   font-size: 0.9rem;
 }
 
-@media screen and (max-width: 768px) {
-  .contentSection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    place-items: center;
-  }
-}
 @media screen and (max-width: 660px) {
   .qualificationContainers .contentSection {
     grid-template-columns: 1fr;
-  }
-  .qualificationContainers .timelineContent {
-    width: 200px;
   }
   .qualificationContainers .timelineContent h4 {
     font-size: 0.4rem;
@@ -366,4 +377,7 @@
   .qualificationContainers .timelineContent p {
     font-size: 0.2rem;
   }
-}/*# sourceMappingURL=about.module.css.map */
+  .qualificationContainers .model {
+    left: calc(80% - 25px);
+  }
+}

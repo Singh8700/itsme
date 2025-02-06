@@ -1,12 +1,18 @@
 
+
 .qualificationContainers {
-    width: 100vw;
-    padding: 2rem 2rem 100px 2rem;
+    width: 80vw;
+   // padding: 2rem 2rem 100px 2rem;
     max-width: 1200px;
-   margin:0% auto 0;
-    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+   // background: red;
     // color: var(--foreground);
-    background: transparent;
+    //background: transparent;
 
     h2 {
         font-size: 2.5rem;
@@ -28,23 +34,16 @@
         width:100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        // grid-template-rows: 1fr 1fr;
-        gap: 3rem;
-        margin-top: 0;
-       
+        
+        gap: 5rem;
     }
     .qualificationContainer {
-       
+        
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: flex-start;
         gap: 5rem;
-        
-
-        @media (max-width: 768px) {
-            flex-direction: column;
-            gap: 2rem;
-        }
+        // background: red;
     }
 
     h3 {
@@ -55,8 +54,13 @@
     }
 
     .timeline {
+       // width:100vw;
         position: relative;
         padding-left: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
         transform-style: preserve-3d;
         perspective: 700px;
         transition: all 0.3s ease;
@@ -69,15 +73,13 @@
             width: 2px;
             background: linear-gradient(to bottom, #90EE90, #32CD32);
         }
+       
     }
 
     .timelineItem {
-        width: 100%;
+       // width: 500px;
         position: relative;
         padding-bottom: 5rem;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
 
         .timelineDot {
             position: absolute;
@@ -91,14 +93,13 @@
         }
 
         .timelineContent {
-            width: 100%;
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             padding: 1.5rem;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             border: 1px solid rgba(144, 238, 144, 0.2);
-
+        position: relative;
             .year {
                 display: inline-block;
                 padding: 0.3rem 1rem;
@@ -112,14 +113,14 @@
                 font-size: 1.2rem;
                 margin-bottom: 0.5rem;
                 color: #90EE90;
-               text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+               // position: absolute;
+                
             }
 
             h5 {
                 font-size: 1rem;
                 margin-bottom: 0.5rem;
                 opacity: 0.9;
-                
             }
 
             p {
@@ -171,6 +172,8 @@
                 height:100%;
                 object-fit: cover;
                 border-radius: 10%;
+                position: absolute;
+                z-index: -20;
                 -webkit-backdrop-filter: blur(10px);
                 backdrop-filter: blur(10px);
             }
@@ -178,66 +181,73 @@
           }
           .model{
             width: 150px;
-            height: 220px;
+            height: 150px;
             border-radius: 10%;
-            // -webkit-backdrop-filter: blur(10px);
-            // backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
             position: absolute;
-            top:0%;
-            left:85%;
-            z-index: 10;
+            top:calc(35% - 25px);
+            left:calc(80% - 20px);
+            overflow: visible;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: visible;
-          
+            // transform: rotate(10deg);
+            // transition: all 0.3s ease;
             img{
-                width:100%;
-                height:100%;
+                width:90%;
+                height:150%;
                 position: absolute;
                 object-fit: fill;
                 border-radius: 10%;
-                top:10%;
-                z-index:1;
+                z-index: 10;
                 -webkit-backdrop-filter: blur(10px);
                 backdrop-filter: blur(10px);
             }
-            span{
-                position: absolute;
-                width:100%;
-                height:100%;
-                border-radius: 10%;
-                // background: rgba(0, 0, 0, 0.2);
-                // backdrop-filter: blur(10px);
-                z-index: -1;
-            }
           }
           .third{
+            width: 150px;
+            height: 150px;
+            border-radius: 10%;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            position: absolute;
+            
+            overflow: visible;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // transform: rotate(10deg);
+            // transition: all 0.3s ease;
             img{
-                width:100%;
-                height:100%;
-
-            }
-          }
-          .first{
-            img{
-                width:80%;
-                height:100%;
+                width:150%;
+                height:150%;
+                position: absolute;
+                object-fit: fill;
+                border-radius: 10%;
+                z-index: 10;
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
             }
           }
     }
-  
+    @media(max-width: 768px){
+      .timelineContent{
+        h5{
+          position: relative;
+          z-index: 999;
+        }
+      }
+    }
     .certificationSection{
-      
+        
     .cards{
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         gap: 2rem;
-        position: relative;
-        z-index: -1;
     }
     .certCard {
         width: 100%;
@@ -283,75 +293,29 @@
 }
 }
 
-@media screen and (max-width: 990px) {
-    .qualificationContainers {
-    .contentSection{
-        grid-template-columns: 1fr 1fr;
-    }
-    .timelineItem{
-        grid-template-columns: 1fr;
-        .model{
-            width: 60%;
-            height: 100%;
-            // background: blue;
-            position: absolute;
-            top:0%;
-            left:80%;
-            overflow: visible;
-            // z-index: 99;
-            span{
-                background: none;
-            }
-            img{
-                z-index: 100;
-            }
-        }
-    }
-}
-}
-
 
 @media screen and (max-width: 660px) {
     .qualificationContainers {
-        .contentSection{
-            grid-template-columns: 1fr;
+        width: 400px;
+    .contentSection{
+      grid-template-columns: 1fr;
+    }
         .timelineContent {
-            max-width: 100%;
-            // background: red;
-            .year{
-                font-size: 0.8rem;
-                margin-left: 0px;
-            }
             h4 {
-                font-size: 1.2rem;
-                -webkit-backdrop-filter: blur(10px);
-                backdrop-filter: blur(10px);
+                font-size: 0.4rem;
             }
 
             h5 {
-                font-size: 0.8rem;
+                font-size: 0.3rem;
             }
 
             p {
-                font-size: 1rem;
-                position: relative;
-                z-index: 99;
+                font-size: 0.2rem;
             }
-        }
-       
-    }
-    
-    .timelineItem{
-        .model{
-            left:55%;
-            span{
-                height: 100%;
-            }
-            img{
-                width:75%;
+            .model{
+              left:calc(65% - 20px);
             }
         }
     }
-    
 }
-}
+  

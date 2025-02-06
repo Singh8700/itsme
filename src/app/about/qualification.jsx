@@ -17,7 +17,7 @@ const Qualification = () => {
     },
     {
       year: "2019 - 2020",
-      degree: "Higher Secondary (12th)",
+      degree: "Senior Secondary School (12th)",
       institution: "G.S.B.V. D-Block Janak Puri",
       description: "Arts with Eco",
       grade: "74%",
