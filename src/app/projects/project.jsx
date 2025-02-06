@@ -1,11 +1,35 @@
-
-"use client"
-import React from 'react'
-import style from './projects.module.css'
-import RandomeColor from '../rendomColor/randomColor'
-import { motion } from 'framer-motion'
+"use client";
+import React, { useEffect, useState } from "react";
+import style from "./projects.module.css";
+import RandomeColor from "../rendomColor/randomColor";
+import { motion } from "framer-motion";
 
 const Qualification = () => {
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  // Ensure window is only accessed on client-side
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setScreenWidth(window.innerWidth);
+
+      // Update width on window resize
+      const handleResize = () => setScreenWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  // Function to truncate text based on screen width
+  const truncateContent = (content, length) => {
+    if (screenWidth >= 690) {
+      return content;
+    } else if (content.length > length) {
+      return content.slice(0, length) + "..."; // Add ellipsis if content is too long
+    }
+    return content;
+  };
+
     const education = [
         {
             year: "Online Post App (Node.js)",
@@ -103,16 +127,6 @@ const Qualification = () => {
       credential: "FREE"
     }
   ]
-
-  const truncateContent = (content, length) => {
-    const screen = window.innerWidth()
-    if(screen >= "690"){
-      return content;
-  }else if (content.length > length) {
-    return content.slice(0, length) + '...';  // Add ellipsis if content is too long
-   }
-    
-  };
 
   return (
     <div className={style.qualificationContainers}>
