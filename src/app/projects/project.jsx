@@ -105,8 +105,8 @@ const Qualification = () => {
   ]
 
   const truncateContent = (content, length) => {
-    
-    if(window.innerWidth >= "690"){
+    const screen = window.innerWidth()
+    if(screen >= "690"){
       return content;
   }else if (content.length > length) {
     return content.slice(0, length) + '...';  // Add ellipsis if content is too long
