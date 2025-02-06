@@ -7,8 +7,6 @@ import Footer from '../footer/footer'
 const page = () => {
   return (
     <>
-      {/* <h1>Projects</h1> */}
-  
     <Projects/>
     <Footer/>
     </>
