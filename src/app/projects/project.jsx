@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "./projects.module.css";
 import RandomeColor from "../rendomColor/randomColor";
 import { motion } from "framer-motion";
@@ -8,7 +8,7 @@ const Qualification = () => {
   const [screenWidth, setScreenWidth] = useState(0);
 
   // Ensure window is only accessed on client-side
-  useEffect(() => {
+  
     if (typeof window !== "undefined") {
       setScreenWidth(window.innerWidth);
 
@@ -18,7 +18,7 @@ const Qualification = () => {
 
       return () => window.removeEventListener("resize", handleResize);
     }
-  }, []);
+  
 
   // Function to truncate text based on screen width
   const truncateContent = (content, length) => {
