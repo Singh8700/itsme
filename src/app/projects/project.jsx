@@ -9,22 +9,11 @@ const Qualification = () => {
 
   // Ensure window is only accessed on client-side
   
-    if (typeof window !== "undefined") {
-      setScreenWidth(window.innerWidth);
-
-      // Update width on window resize
-      const handleResize = () => setScreenWidth(window.innerWidth);
-      window.addEventListener("resize", handleResize);
-
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  
+    
 
   // Function to truncate text based on screen width
   const truncateContent = (content, length) => {
-    if (screenWidth >= 690) {
-      return content;
-    } else if (content.length > length) {
+     if (content.length > length) {
       return content.slice(0, length) + "..."; // Add ellipsis if content is too long
     }
     return content;
