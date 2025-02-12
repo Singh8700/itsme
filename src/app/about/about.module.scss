@@ -263,7 +263,8 @@
             backdrop-filter: blur(10px);
             position: absolute;
             top:10%;
-            right:0px;
+            left:calc(80% - 35px);
+            z-index: 2;
             overflow: visible;
             display: flex;
             justify-content: center;
@@ -316,6 +317,9 @@
           z-index: 999;
         }
       }
+      .model{
+        left:calc(80% - 25px)
+    }
     }
     .certificationSection{
         display: flex;

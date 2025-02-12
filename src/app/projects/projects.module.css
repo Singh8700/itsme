@@ -8,7 +8,6 @@
   flex-wrap: wrap;
   margin: 0 auto;
 }
-
 .qualificationContainers h2 {
   font-size: 2.5rem;
   text-align: center;
@@ -18,35 +17,30 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .qualificationContainers .subtitle {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 3rem;
   opacity: 0.8;
 }
-
 .qualificationContainers .contentSection {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
 }
-
 .qualificationContainers .qualificationContainer {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   gap: 5rem;
 }
-
 .qualificationContainers h3 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
   text-align: center;
   color: var(--foreground);
 }
-
 .qualificationContainers .timeline {
   position: relative;
   padding-left: 2rem;
@@ -58,9 +52,8 @@
   perspective: 700px;
   transition: all 0.3s ease;
 }
-
 .qualificationContainers .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -68,12 +61,10 @@
   width: 2px;
   background: linear-gradient(to bottom, #90EE90, #32CD32);
 }
-
 .qualificationContainers .timelineItem {
   position: relative;
   padding-bottom: 5rem;
 }
-
 .qualificationContainers .timelineItem .timelineDot {
   position: absolute;
   left: -2.4rem;
@@ -84,17 +75,16 @@
   background: #90EE90;
   border: 2px solid var(--background);
 }
-
 .qualificationContainers .timelineItem .timelineContent {
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(144, 238, 144, 0.2);
   position: relative;
 }
-
 .qualificationContainers .timelineItem .timelineContent .year {
   display: inline-block;
   padding: 0.3rem 1rem;
@@ -103,35 +93,29 @@
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
-
 .qualificationContainers .timelineItem .timelineContent h4 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #90EE90;
 }
-
 .qualificationContainers .timelineItem .timelineContent h5 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   opacity: 0.9;
 }
-
 .qualificationContainers .timelineItem .timelineContent p {
   font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 0.5rem;
 }
-
 .qualificationContainers .timelineItem .timelineContent a {
   color: var(--foreground);
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
 .qualificationContainers .timelineItem .timelineContent a:hover {
   color: #90EE90;
 }
-
 .qualificationContainers .timelineItem .timelineContent .grade {
   display: inline-block;
   padding: 0.2rem 0.8rem;
@@ -139,19 +123,18 @@
   border-radius: 15px;
   font-size: 0.9rem;
 }
-
 .qualificationContainers .timelineItem .timelineContent .btn {
   display: flex;
   gap: 1rem;
   justify-content: flex-start;
   align-items: center;
 }
-
 .qualificationContainers .timelineItem .images {
   width: 150px;
   height: 150px;
   border-radius: 10%;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   position: absolute;
   top: 10%;
   right: 0px;
@@ -159,18 +142,17 @@
   justify-content: center;
   align-items: center;
 }
-
 .qualificationContainers .timelineItem .images img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10%;
   position: absolute;
   z-index: -20;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-
 .qualificationContainers .timelineItem .model {
   width: 150px;
   height: 150px;
@@ -185,18 +167,17 @@
   justify-content: center;
   align-items: center;
 }
-
 .qualificationContainers .timelineItem .model img {
   width: 90%;
   height: 150%;
   position: absolute;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
   border-radius: 10%;
   z-index: 10;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-
 .qualificationContainers .timelineItem .third {
   width: 150px;
   height: 150px;
@@ -209,25 +190,23 @@
   justify-content: center;
   align-items: center;
 }
-
 .qualificationContainers .timelineItem .third img {
   width: 150%;
   height: 150%;
   position: absolute;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
   border-radius: 10%;
   z-index: 10;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
-
 @media (max-width: 768px) {
   .qualificationContainers .timelineContent h5 {
     position: relative;
     z-index: 999;
   }
 }
-
 .qualificationContainers .certificationSection .cards {
   width: 100%;
   display: flex;
@@ -236,18 +215,17 @@
   flex-direction: column;
   gap: 2rem;
 }
-
 .qualificationContainers .certificationSection .certCard {
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(144, 238, 144, 0.2);
   transition: all 0.3s ease;
 }
-
 .qualificationContainers .certificationSection .certCard .year {
   display: inline-block;
   padding: 0.3rem 1rem;
@@ -256,7 +234,6 @@
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
-
 .qualificationContainers .certificationSection .certCard .title {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -264,13 +241,11 @@
   word-break: keep-all;
   -ms-word-break: keep-all;
 }
-
 .qualificationContainers .certificationSection .certCard p {
   font-size: 0.9rem;
   opacity: 0.8;
   margin-bottom: 0.5rem;
 }
-
 .qualificationContainers .certificationSection .certCard .credential {
   display: inline-block;
   padding: 0.2rem 0.8rem;
@@ -298,4 +273,4 @@
   .qualificationContainers .timelineContent .model {
     left: calc(65% - 20px);
   }
-}
+}/*# sourceMappingURL=projects.module.css.map */

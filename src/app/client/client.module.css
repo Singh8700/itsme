@@ -1,0 +1,78 @@
+.containers {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.containers .clientContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.containers .clientContainer .clientBox {
+  width: "max-content";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 10px 2px rgba(0, 0, 0, 0.5), inset 0px 10px 10px rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+.containers .clientContainer .clientBox .clientImg {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containers .clientContainer .clientBox .clientImg img {
+  width: 100%;
+  height: 130%;
+}
+.containers .clientContainer .clientBox .clientInfo {
+  width: 300px;
+  word-break: keep-all;
+  padding: 2rem 10px;
+}
+.containers .clientContainer .clientBox .clientInfo h3 {
+  background: #90EE90;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.containers .clientContainer .clientBox .clientInfo h4 {
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: #74b574;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.containers .clientContainer .clientBox .clientInfo p {
+  color: var(--foreground);
+}
+.containers .clientContainer .clientBox .clientInfo span {
+  width: 100%;
+  display: flex;
+  justify-self: flex-end;
+  align-items: right;
+  text-align: right;
+  font-size: 0.8rem;
+  padding: 2rem 0;
+}
+@media (max-width: 660px) {
+  .containers .clientContainer .clientBox {
+    width: calc(80% - 25px);
+  }
+}/*# sourceMappingURL=client.module.css.map */
