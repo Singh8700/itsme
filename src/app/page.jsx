@@ -7,6 +7,8 @@ import Link from 'next/link';
 import Footer from './footer/footer';
 import AboutContent from './about/aboutContent';
 import ClientPage from './client/clientPage';
+import ContactPage from './contact/page';
+
 
 export default function Home() {
   const randNumber = Math.floor(Math.random() * 3);
@@ -35,19 +37,19 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className={style.heroContent}
             >
-              <h1>
+              <span className={style.heroText}>
                 {letters.map((letter, index) => (
-                  <motion.h1
+                  <motion.span
                     key={index}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.3 }}
                   >
-                    {letter}
-                  </motion.h1>
+                    {(letter === " ")?<span>&nbsp;</span>:letter}
+                  </motion.span>
                 ))}
-              </h1>
+              </span>
               <p>Turning Ideas into Digital Reality</p>
               <div className={style.ctaButtons}>
                 <Link href="/projects">
@@ -61,8 +63,9 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <AboutContent />
+      <AboutContent length="196" />
       <ClientPage/>
+      <ContactPage/>
       <Footer />
     </>
   );

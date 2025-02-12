@@ -16,7 +16,7 @@
     top:20%;
     left:20%;
     transform: translate(-20%, -20%);
-    z-index: -25;
+    z-index: -1;
     display: flex;
     // background: red;
     justify-content: center;
@@ -54,6 +54,7 @@
   }
   @media (max-width: 480px) {
     .overlay{
+     
       width:300px;
       height:300px;
       left:20%;
@@ -80,8 +81,8 @@
       max-width: 800px;
       padding: 0 20px;
       // backdrop-filter: blur(10px);
-      h1 {
-        font-size: 4rem;
+      .heroText {
+        font-size: 5rem;
         margin-bottom: 1rem;
         background: linear-gradient(45deg, #90EE90, #32CD32);
         -webkit-background-clip: text;
@@ -89,13 +90,22 @@
         font-weight: bold;
         display: flex;
         // backdrop-filter: blur(10px);
+        @media (max-width: 768px) {
+          font-size: 4.5rem;
+        }
+        @media (max-width: 660px) {
+          font-size: 2.5rem;
+        }
       }
-  
+      
       p {
         font-size: 1.5rem;
         margin-bottom: 2rem;
         color: var(--foreground);
         opacity: 0.8;
+        @media (max-width: 660px) {
+          font-size:1.3rem;
+        }
       }
   
       .ctaButtons {

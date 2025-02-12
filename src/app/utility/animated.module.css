@@ -1,15 +1,20 @@
 .containers {
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 .containers .heading {
+  width: 100vw;
+  text-align: center;
   font-size: 3rem;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 .containers .subHeading {
   font-size: 1rem;
   font-family: Georgia, "Times New Roman", Times, serif;
+}
+.containers .motionWord {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 1px;
 }/*# sourceMappingURL=animated.module.css.map */

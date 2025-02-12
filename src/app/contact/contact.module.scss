@@ -1,7 +1,7 @@
 .Warrper{
     
     height: 100vh;
-    max-width: 1200px;
+    max-width: 100vw;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -10,7 +10,6 @@
     // background: red;
     position: relative;
     h1 {
-      
       text-align: center;
       margin-bottom: 1rem;
       background: linear-gradient(to right, #90EE90, #50C878);
@@ -20,7 +19,7 @@
   
     .subtitle {
       text-align: center;
-      color: #666;
+      color: #ccc;
       margin-bottom: 3rem;
     }
 }
@@ -30,6 +29,7 @@
   grid-template-columns: 1fr;
   gap: 2rem;
   overflow-x: hidden;
+  align-items: center;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }

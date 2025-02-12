@@ -1,10 +1,11 @@
 .containers{
-    width:100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+
     .heading{
+        width:100vw;
+        text-align: center;
         font-size: 3rem;
         font-family: Georgia, 'Times New Roman', Times, serif;
         // background: red;
@@ -13,4 +14,10 @@
         font-size: 1rem;
         font-family:  Georgia, 'Times New Roman', Times, serif;
     }
+    .motionWord {
+        // background: blue;
+        display: inline-block; 
+        white-space: nowrap; 
+        margin-right: 1px;
+      }
 }

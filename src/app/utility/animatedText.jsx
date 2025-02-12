@@ -17,8 +17,10 @@ const AnimatedText = (props) => {
     {animatedText.map((letter, index) => (
                   <motion.span
                     key={index}
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    className={style.motionWord}
+                    initial={{ opacity: 0, y:-20}}
+                    whileInView={{ opacity: 1,y:0}}
+                    exit={{opacity: 0, y:-20}}
                     transition={{ delay: index * 0.1, duration: 0.3 }}
                   >
                     {(letter === ' ')?<span>&nbsp;</span>:letter}

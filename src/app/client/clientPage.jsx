@@ -4,6 +4,7 @@ import style from './client.module.css'
 
 import AnimatedText from '../utility/animatedText'
 import RandomeColor from '../rendomColor/randomColor'
+import Link from 'next/link'
 
 
 const clientPage = () => {
@@ -12,18 +13,20 @@ const clientPage = () => {
 
     const clientDetail = [
         {
-            img:"./imgs/pic01.png",
-            name:"Rector",
+            img:"./imgs/rtr.png",
+            name:"Rector.world",
             subTitle:"Ads Marketing",
-            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officiis, ea est deserunt suscipit porro asperiores explicabo, voluptatum pariatur beatae harum iste modi at eligendi expedita non exercitationem dolore consectetur.",
-            handel:"intagram"
+            description:"Executed a full-scale digital marketing campaign for Rector Token, leveraging social media ads, posters, and video content to boost engagement & conversions.",
+            handel:"https://www.instagram.com/rectorcrypto/",
+            stutas:"true"
         },
         {
             img:"./imgs/pic02.png",
-            name:"Rector",
-            subTitle:"Ads Marketing",
-            description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora officiis, ea est deserunt suscipit porro asperiores explicabo, voluptatum pariatur beatae harum iste modi at eligendi expedita non exercitationem dolore consectetur.",
-            handel:"intagram"
+            name:"Client",
+            subTitle:"PC Hardware & Software",
+            description:"Diagnosed and fixed PC faults for an institute client, resolving hardware & software issues, optimizing performance, and ensuring smooth system operation.",
+            handel:"intagram",
+            stutas:"false"
         }
     ]
 
@@ -32,7 +35,7 @@ const clientPage = () => {
     <div className={style.containers}>
        <div className={style.titles}>
        <RandomeColor content={<AnimatedText text="Client" tags="heading"/>}/>
-        <RandomeColor content={<AnimatedText text="I am happy to see you here" tags="subHeading"/>}/>
+        <RandomeColor content={<AnimatedText text="Building trust, one client at a time! 🤝✨" tags="subHeading"/>}/>
        </div>
        <div className={style.clientContainer}>
        {clientDetail.map((item, index) => (
@@ -47,12 +50,16 @@ const clientPage = () => {
                 <h4>
                     {item.subTitle}
                 </h4>
-                <p className={style.clientPara}>
+                <p>
                     {item.description}
                 </p>
-                <span>
-                    {item.handel}
-                </span>
+                {item.stutas === "true"?(
+                    <span>
+                    <Link href={`${item.handel}`}>
+                        Instagram Profile
+                    </Link>
+                    </span>
+                ):null}
             </div>
         </div>
         ))}

@@ -382,6 +382,14 @@
 
 
 @media screen and (max-width: 660px) {
+    .aboutContainer{
+    background: transparent;
+    .aboutContent{
+        background: transparent;
+        text-align: justify;
+       
+    }
+    }
     .qualificationContainers {
        // width: 400px;
     .contentSection{

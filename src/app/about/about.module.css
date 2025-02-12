@@ -340,6 +340,13 @@
 }
 
 @media screen and (max-width: 660px) {
+  .aboutContainer {
+    background: transparent;
+  }
+  .aboutContainer .aboutContent {
+    background: transparent;
+    text-align: justify;
+  }
   .qualificationContainers .contentSection {
     grid-template-columns: 1fr;
   }
