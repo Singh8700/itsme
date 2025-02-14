@@ -1,3 +1,13 @@
+.main{
+  width:100vw;
+  height:max-content;
+  position:relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
 .Warrper{
     
     height: 100vh;

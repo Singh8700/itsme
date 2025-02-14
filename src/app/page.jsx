@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Footer from './footer/footer';
 import AboutContent from './about/aboutContent';
 import ClientPage from './client/clientPage';
-import ContactPage from './contact/page';
+import ContactPage from './contact/contactPage';
 
 
 export default function Home() {

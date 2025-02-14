@@ -1,6 +1,7 @@
 .footerContainer {
   width: 100vw;
-  background: rgba(0, 0, 0, 0.3);
+  height: -moz-fit-content;
+  height: fit-content;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   color: var(--foreground);

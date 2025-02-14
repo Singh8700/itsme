@@ -47,7 +47,14 @@ const AboutContent = (props) => {
 
   const truncateContent = (content, length) => {
     if (content.length > length) {
-      return content.slice(0, length) + '...';  // Add ellipsis if content is too long
+     return  content.slice(0, length) + '...' ; 
+       if(content.length < length){
+        return  pathname === "/about" ? null : (
+          <Link className={style.readMore} href="/about">
+            Read More..
+          </Link>
+        )
+       } // Add ellipsis if content is too long
     }
     return content;
   };
