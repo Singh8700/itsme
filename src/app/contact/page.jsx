@@ -5,6 +5,8 @@ import { FaGithub, FaLinkedin, FaWhatsapp, FaMailBulk, FaMapMarkerAlt, FaPhone }
 import { GrInstagram } from "react-icons/gr"
 import RandomeColor from '../rendomColor/randomColor'
 import Footer from '../footer/footer'
+import VisitingCard from '../visitingCards/visitingCard'
+
 const ContactPage = () => {
   return (
     <>
@@ -63,6 +65,8 @@ const ContactPage = () => {
         </div> */}
       </div>
     </div>
+    <VisitingCard positionType="left"/>
+    <VisitingCard positionType="right"/>
     <Footer/>
     </>
   )
