@@ -37,6 +37,9 @@ export const metadata = {
   twitterDescription: "You think you know Rohit? Find out the truth!",
   twitterImage: "https://singh8700.github.io/itsme/assets/profile.png",
   twitterCard: "summary_large_image",
+
+  //google verification code 
+  name:"google-site-verification" ,content:"7-0CsP-a--qYOgotHrh_RWoQNI2fiVvugVg2wlmVzHI"
 };
 
 
