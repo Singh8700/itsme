@@ -1,8 +1,8 @@
 import { Inter, Roboto_Mono } from "next/font/google";
+import Head from "next/head";
 import "./globals.css";
-import HeaderSection from "./home/header"
-import Background from "./objects/Background"
-
+import HeaderSection from "./home/header";
+import Background from "./objects/Background";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,13 +22,10 @@ export const metadata = {
   robots: "index, follow",
   canonical: "https://singh8700.github.io/itsme",
 
-  // Google Search Console Verification
-  googleSiteVerification: "7-0CsP-a--qYOgotHrh_RWoQNI2fiVvugVg2wlmVzHI",
-
   // Open Graph (For Facebook, Instagram, LinkedIn)
   ogTitle: "Rohit | It's Me, Friend - You Know Who I Am!",
   ogDescription: "Discover the real Rohit. Are you ready to know the truth?",
-  ogImage: "https://singh8700.github.io/itsme/assets/profile.jpg", // Update with your actual image path
+  ogImage: "https://singh8700.github.io/itsme/assets/profile.jpg",
   ogUrl: "https://singh8700.github.io/itsme",
   ogType: "website",
 
@@ -42,22 +39,20 @@ export const metadata = {
   twitterCard: "summary_large_image",
 };
 
-
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${robotoMono.variable}`}
-      >
-       
-        <Background/>
-        <HeaderSection/>
-        <main style={{ minHeight: '100vh', position: 'relative', zIndex: 1 }}>
+      <Head>
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="7-0CsP-a--qYOgotHrh_RWoQNI2fiVvugVg2wlmVzHI" />
+      </Head>
+      <body className={`${inter.variable} ${robotoMono.variable}`}>
+        <Background />
+        <HeaderSection />
+        <main style={{ minHeight: "100vh", position: "relative", zIndex: 1 }}>
           {children}
         </main>
-      {/* <Footer/> */}
+        {/* <Footer/> */}
       </body>
     </html>
   );
