@@ -17,15 +17,18 @@ const robotoMono = Roboto_Mono({
 export const metadata = {
   title: "Rohit | It's Me, Friend - Discover Who I Am",
   description: "Unlock the mystery! Get to know Rohit like never before. Your search ends here.",
-  keywords: "Rohit, know Rohit, who is Rohit, Singh87_Singh, Rohit's portfolio, web developer, digital arts, portfolio website, Rohit Singh",
+  keywords: "Rohit, know Rohit, who is Rohit, Singh87_Singh, Rohit's portfolio, web developer",
   author: "Rohit Singh",
   robots: "index, follow",
   canonical: "https://singh8700.github.io/itsme",
 
+  // Google Search Console Verification
+  googleSiteVerification: "7-0CsP-a--qYOgotHrh_RWoQNI2fiVvugVg2wlmVzHI",
+
   // Open Graph (For Facebook, Instagram, LinkedIn)
   ogTitle: "Rohit | It's Me, Friend - You Know Who I Am!",
   ogDescription: "Discover the real Rohit. Are you ready to know the truth?",
-  ogImage: "https://singh8700.github.io/itsme/assets/profile.png", // Update with your actual image path
+  ogImage: "https://singh8700.github.io/itsme/assets/profile.jpg", // Update with your actual image path
   ogUrl: "https://singh8700.github.io/itsme",
   ogType: "website",
 
@@ -35,12 +38,10 @@ export const metadata = {
   // Twitter (Even if you don't have an account, it's good for sharing previews)
   twitterTitle: "Rohit | It's Me, Friend - Can You Guess?",
   twitterDescription: "You think you know Rohit? Find out the truth!",
-  twitterImage: "https://singh8700.github.io/itsme/assets/profile.png",
+  twitterImage: "https://singh8700.github.io/itsme/assets/profile.jpg",
   twitterCard: "summary_large_image",
-
-  //google verification code 
-  name:"google-site-verification" ,content:"7-0CsP-a--qYOgotHrh_RWoQNI2fiVvugVg2wlmVzHI"
 };
+
 
 
 
